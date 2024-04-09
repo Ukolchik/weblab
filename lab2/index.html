@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a class="link" href="2.html">Перейти на страницу с другой формой</a>
+
+    <div class="container">
+        <h1>War Thunder</h1>
+        <h2>Обратная связь</h2>
+    </div>
+
+    <form method="POST" action="http://httpbin.org/post">
+
+        <div>
+            <label for="fio">Как вас зовут?</label>
+            <input type="text" id="fio" placeholder="Иванов Иван Иванович" name="fio" value="example" required>
+        </div>
+
+        <div>
+            <label for="email">Почта</label>
+            <input type="email" id="email" placeholder="ivan@ivanov.ru" name="fio" required value="example@gmial.ru">
+        </div>
+
+        <fieldset>
+            <legend>Как вы о нас узнали?</legend>
+            <div>
+                <input type="radio" name="radiosource" id="friends" value="friends">
+                <label for="friends">От друзей, семьи, знакомых</label>
+            </div>
+            <div>
+                <input type="radio" name="radiosource" id="ad" value="ad">
+                <label for="ad">Реклама в интернете</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <label for="feedback_type">Тип обращения</label>
+            <select name="feedback_type" id="feedback_type">
+                <option value="1">Жалоба</option>
+                <option value="2" selected>Предложение</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="message">Текст сообщения</label>
+            <textarea id="message" name="message" rows="4" placeholder="Введите ваше сообщение...">Привет</textarea>
+        </div>
+
+        <div>
+            <label for="attachment">Вложение</label>
+            <input type="file" name="attachment" id="attachment">
+        </div>
+
+        <div>
+            <input type="checkbox" name="agree" id="agree">
+            <label for="agree">Согласен с правилами обработки персональных данных</label>
+        </div>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+</body>
+</html>
